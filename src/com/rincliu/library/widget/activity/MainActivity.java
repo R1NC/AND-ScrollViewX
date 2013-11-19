@@ -33,6 +33,10 @@ public class MainActivity extends Activity {
 					Toast.makeText(MainActivity.this, "Stopped", Toast.LENGTH_SHORT).show();
 				}
 			}
+			@Override
+			public void onScrolling() {
+				android.util.Log.d("@","scrolling...");
+			}
 		});
 	}
 }

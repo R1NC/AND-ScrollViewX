@@ -67,6 +67,9 @@ public class ScrollViewX extends ScrollView{
 	                    onScrollListener.onScrollStopped();
 	                }
 				}else{
+					if(onScrollListener!=null){
+	                    onScrollListener.onScrolling();
+	                }
 	                currentScroll=getScrollY();
 	                postDelayed(scrollCheckTask, DELAY);
 	            }
@@ -87,6 +90,7 @@ public class ScrollViewX extends ScrollView{
 	public interface OnScrollListener{
 		public void onScrollChanged(int x, int y, int oldX, int oldY);
 		public void onScrollStopped();
+		public void onScrolling();
 	}
 	
 	private OnScrollListener onScrollListener;

@@ -8,46 +8,35 @@ import android.widget.TextView;
 import android.widget.Toast;
 import android.app.Activity;
 
-public class MainActivity extends Activity
-{
+public class MainActivity extends Activity {
 
     @Override
-    protected void onCreate(Bundle savedInstanceState)
-    {
+    protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         final ScrollViewX svx = new ScrollViewX(this);
         setContentView(svx);
         TextView tv = new TextView(this);
         tv.setHeight(3000);
         svx.addView(tv);
-        svx.setOnScrollListener(new OnScrollListener()
-        {
+        svx.setOnScrollListener(new OnScrollListener() {
             @Override
-            public void onScrollChanged(int x, int y, int oldX, int oldY)
-            {
+            public void onScrollChanged(int x, int y, int oldX, int oldY) {
                 android.util.Log.d("@", "x:" + oldX + "->" + x + ", y:" + oldY + "->" + y);
             }
 
             @Override
-            public void onScrollStopped()
-            {
-                if (svx.isAtTop())
-                {
+            public void onScrollStopped() {
+                if (svx.isAtTop()) {
                     Toast.makeText(MainActivity.this, "Stopped at top", Toast.LENGTH_SHORT).show();
-                }
-                else if (svx.isAtBottom())
-                {
+                } else if (svx.isAtBottom()) {
                     Toast.makeText(MainActivity.this, "Stopped at bottom", Toast.LENGTH_SHORT).show();
-                }
-                else
-                {
+                } else {
                     Toast.makeText(MainActivity.this, "Stopped", Toast.LENGTH_SHORT).show();
                 }
             }
 
             @Override
-            public void onScrolling()
-            {
+            public void onScrolling() {
                 android.util.Log.d("@", "scrolling...");
             }
         });

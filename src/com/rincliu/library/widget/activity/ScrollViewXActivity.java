@@ -8,7 +8,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 import android.app.Activity;
 
-public class MainActivity extends Activity {
+public class ScrollViewXActivity extends Activity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -27,11 +27,11 @@ public class MainActivity extends Activity {
             @Override
             public void onScrollStopped() {
                 if (svx.isAtTop()) {
-                    Toast.makeText(MainActivity.this, "Stopped at top", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(ScrollViewXActivity.this, "Stopped at top", Toast.LENGTH_SHORT).show();
                 } else if (svx.isAtBottom()) {
-                    Toast.makeText(MainActivity.this, "Stopped at bottom", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(ScrollViewXActivity.this, "Stopped at bottom", Toast.LENGTH_SHORT).show();
                 } else {
-                    Toast.makeText(MainActivity.this, "Stopped", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(ScrollViewXActivity.this, "Stopped", Toast.LENGTH_SHORT).show();
                 }
             }
 

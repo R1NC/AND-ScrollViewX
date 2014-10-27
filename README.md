@@ -1,6 +1,6 @@
 Introduction
 ==========
-An extension of the origin `ScrollView`.
+An extension of `ScrollView`.
 Features
 ==========
 * <code>setOnScrollListener()</code>;

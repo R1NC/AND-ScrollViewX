@@ -1,8 +1,7 @@
-Introduction
-==========
+### Introduction
 An extension of `ScrollView`.
-Features
-==========
+
+### Features
 * <code>setOnScrollListener()</code>;
 * <code>isChildVisible()</code>;
 * <code>isAtTop()</code>;
